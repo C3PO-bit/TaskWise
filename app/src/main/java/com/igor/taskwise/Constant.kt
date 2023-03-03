@@ -9,5 +9,13 @@ class Constant {
         const val EXTRA_TASK_END = "end"
         const val EXTRA_DESCRIPTION = "description"
         const val ADD_TASK_RESULT = 1
+
+        //Notification
+        const val CHANNEL_ID = "chanelId"
+        const val CHANNEL_NAME = "chanelName"
+        const val NOTIFICATION_ID = 0
+
+        //Shared Preferences
+        const val SHARED_PREF_VALUE = "pref"
     }
 }

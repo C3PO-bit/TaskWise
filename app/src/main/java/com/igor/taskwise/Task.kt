@@ -1,8 +1,11 @@
 package com.igor.taskwise
 
 import android.widget.EditText
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.sql.Date
 import java.sql.Time
+
 
 data class Task(
     var projectTitle:String?,

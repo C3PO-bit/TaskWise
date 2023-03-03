@@ -1,9 +1,16 @@
 package com.igor.taskwise
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.format.DateFormat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.lottie.LottieAnimationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +27,10 @@ class MainActivity : AppCompatActivity() {
         greetingText()
         setupGreetingImage()
         setupAdapter()
+
     }
+
+
 
     private fun setupAdapter() {
         adapter = TaskAdapter(taskList)
@@ -56,7 +66,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private fun setupGreetingImage() {
         val animationView = findViewById<LottieAnimationView>(R.id.iv_greeting)
