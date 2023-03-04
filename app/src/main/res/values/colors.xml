@@ -20,4 +20,6 @@
     <color name="high_priority">#ff7360</color>
     <color name="medium_priority">#f8aa4c</color>
     <color name="low_priority">#b1d199</color>
+
+    <color name="error_color">#f73131</color>
 </resources>

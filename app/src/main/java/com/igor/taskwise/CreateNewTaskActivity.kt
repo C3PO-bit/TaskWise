@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_create_new_task.*
 import kotlinx.android.synthetic.main.activity_create_new_task.tv_date
 import kotlinx.android.synthetic.main.item_task.*
@@ -167,16 +168,47 @@ class CreateNewTaskActivity : AppCompatActivity() {
 
     private fun createNewTask() {
         create_task_button.setOnClickListener {
-            Intent().apply {
-                putExtra(Constant.EXTRA_TASK_TITLE, et_task_title.text.toString())
-                putExtra(Constant.EXTRA_TASK_DATE, tv_date.text.toString())
-                putExtra(Constant.EXTRA_TASK_PRIORITY, tv_priority.text.toString())
-                putExtra(Constant.EXTRA_TASK_START, tv_time_hour.text.toString())
-                putExtra(Constant.EXTRA_TASK_END, tv_time_hour_end.text.toString())
-                setResult(RESULT_OK, this)
+            var isValid = true
 
+            //validate fields
+            if (et_task_title.text.isNullOrEmpty()) {
+                et_task_title.background = ContextCompat.getDrawable(this, R.drawable.red_outline)
+                isValid = false
+            } else {
+                et_task_title.background = null
             }
-            finish()
+
+            if (tv_date.text.isNullOrEmpty()) {
+                isValid = false
+            }
+
+            if (tv_priority.text.isNullOrEmpty()) {
+                isValid = false
+            }
+
+            if (tv_time_hour.text.isNullOrEmpty()) {
+                isValid = false
+            }
+
+            if (tv_time_hour_end.text.isNullOrEmpty()) {
+                isValid = false
+            }
+
+            // If all fields are filled, create the task
+            if (isValid) {
+                Intent().apply {
+                    putExtra(Constant.EXTRA_TASK_TITLE, et_task_title.text.toString())
+                    putExtra(Constant.EXTRA_TASK_DATE, tv_date.text.toString())
+                    putExtra(Constant.EXTRA_TASK_PRIORITY, tv_priority.text.toString())
+                    putExtra(Constant.EXTRA_TASK_START, tv_time_hour.text.toString())
+                    putExtra(Constant.EXTRA_TASK_END, tv_time_hour_end.text.toString())
+                    setResult(RESULT_OK, this)
+                }
+                finish()
+            } else {
+                // Display a Toast message if any fields are left empty
+                Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            }
 
         }
     }

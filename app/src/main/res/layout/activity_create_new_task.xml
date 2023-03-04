@@ -18,6 +18,8 @@
         android:text="Create New Task"
         android:textColor="@color/white"
         android:textSize="22sp"
+        android:layout_marginTop="10dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -236,10 +238,12 @@
         android:gravity="top|start"
         android:fontFamily="@font/questrial_regular"
         android:inputType="textMultiLine"
-        android:lines="10"
+        android:lines="5"
         android:padding="10dp"
         android:textColor="@color/sub_text_color"
         android:theme="@style/CustomCursor"
         app:layout_constraintStart_toStartOf="@+id/tv_description_header"
         app:layout_constraintTop_toBottomOf="@+id/tv_description_header" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
