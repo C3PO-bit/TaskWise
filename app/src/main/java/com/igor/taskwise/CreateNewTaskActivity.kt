@@ -80,14 +80,20 @@ class CreateNewTaskActivity : AppCompatActivity() {
         val selectedTime = calendar.timeInMillis
         sharedPreferences.edit().putLong("time",selectedTime).apply()
 
-        val reminderTime = selectedTime - 15 * 60 * 1000
-        val intent = Intent(this,ReminderReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(this,0,intent,0)
-        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP,reminderTime,pendingIntent)
+        // Calculate time difference between current time and selected start time
+        val currentTime = System.currentTimeMillis()
+        val timeDiff = selectedTime - currentTime
 
-
+        // Send notification only if time difference is greater than or equal to 15 minutes
+        if (timeDiff >= 15 * 60 * 1000) {
+            val reminderTime = selectedTime - 15 * 60 * 1000
+            val intent = Intent(this,ReminderReceiver::class.java)
+            val pendingIntent = PendingIntent.getBroadcast(this,0,intent,0)
+            val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP,reminderTime,pendingIntent)
+        }
     }
+
 
 
     @RequiresApi(Build.VERSION_CODES.M)
