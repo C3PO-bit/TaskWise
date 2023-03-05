@@ -94,8 +94,6 @@ class CreateNewTaskActivity : AppCompatActivity() {
         }
     }
 
-
-
     @RequiresApi(Build.VERSION_CODES.M)
     private fun endTaskTime() {
         ll_task_end_holder.setOnClickListener {

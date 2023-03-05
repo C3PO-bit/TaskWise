@@ -12,9 +12,11 @@
         android:id="@+id/iv_greeting"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginStart="4dp"
         app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintStart_toStartOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
 
     <TextView
         android:id="@+id/tv_greeting"
@@ -29,26 +31,20 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Good Morning" />
 
-    <TextView
-        android:id="@+id/tv_pending_tasks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/questrial_regular"
-        android:textColor="@color/btn_colors"
-        app:layout_constraintStart_toStartOf="@+id/tv_greeting"
-        app:layout_constraintTop_toBottomOf="@+id/tv_greeting"
-        tools:text="You have 10 pending tasks" />
-
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="@drawable/searchview_bg"
-        android:queryBackground="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true"
+        app:searchIcon="@drawable/ic_search"
+        app:iconifiedByDefault="false"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/fab_sort"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pending_tasks"/>
+        app:layout_constraintTop_toBottomOf="@+id/fab_sort" />
+
 
     <TextView
         android:id="@+id/tv_ongoing_tasks"
@@ -58,9 +54,9 @@
         android:fontFamily="@font/questrial_regular"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
-        tools:text="Your ongoing tasks" />
+        tools:text="Your  tasks" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_current_tasks"
@@ -81,4 +77,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_greeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_greeting"
+        app:srcCompat="@drawable/ic_sort" />
 </androidx.constraintlayout.widget.ConstraintLayout>

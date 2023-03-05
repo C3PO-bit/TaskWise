@@ -4,14 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Jorda/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/activity_list_item.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable-anydpi/ic_sort.xml" value="0.149" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable-v24/red_outline.xml" value="0.149" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable/btn_background.xml" value="0.114" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable/custom_cursor.xml" value="0.1" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable/et_custom_line.xml" value="0.114" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable/searchview_bg.xml" value="0.114" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/drawable/task_fields_bg.xml" value="0.114" />
-        <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/activity_create_new_task.xml" value="0.4" />
-        <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/activity_main.xml" value="0.3564356435643564" />
+        <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/activity_create_new_task.xml" value="0.2" />
+        <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/activity_task_details.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/custom_time_picker.xml" value="0.2" />
         <entry key="..\:/Users/Jorda/Desktop/Kotlin Projects Portfolio/Task Wise/app/src/main/res/layout/item_task.xml" value="0.4" />
       </map>

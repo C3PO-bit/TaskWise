@@ -1,5 +1,6 @@
 package com.igor.taskwise
 
+import android.app.AlertDialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
@@ -27,9 +28,36 @@ class MainActivity : AppCompatActivity() {
         greetingText()
         setupGreetingImage()
         setupAdapter()
-
+        sortTasks()
     }
 
+    private fun sortTasks() {
+        val sortItems = arrayOf("Priority","Date")
+        var selectedItem = 0
+        fab_sort.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Sort tasks by")
+                .setSingleChoiceItems(sortItems,selectedItem) {_,which ->
+                    selectedItem = which
+                }
+                .setPositiveButton("Sort") { _, _ ->
+                    when (selectedItem) {
+                        0 -> sortTasksByPriority()
+                        1 -> sortTasksByDate()
+                    }
+                }
+                .setNegativeButton("Cancel", null)
+                .show()
+        }
+    }
+
+    private fun sortTasksByPriority() {
+        //TODO: Implement logic
+    }
+
+    private fun sortTasksByDate() {
+        //TODO: Implement logic
+    }
 
 
     private fun setupAdapter() {
