@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_color"
+    android:background="#f2f2f3"
     android:padding="20dp"
     tools:context=".CreateNewTaskActivity">
 
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/questrial_regular"
         android:text="Create New Task"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="22sp"
         android:layout_marginTop="10dp"
 
@@ -33,7 +33,7 @@
         android:padding="10dp"
         android:lines="1"
         android:fontFamily="@font/questrial_regular"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:theme="@style/CustomCursor"
         app:layout_constraintStart_toStartOf="@+id/tv_task_title_hint"
         app:layout_constraintTop_toBottomOf="@+id/tv_task_title_hint" />
@@ -45,7 +45,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/questrial_regular"
         android:text="Task title"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tv_create_new_task_header"
         app:layout_constraintTop_toBottomOf="@+id/tv_create_new_task_header" />
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:background="@drawable/task_fields_bg"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="15dp">
 
@@ -87,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/questrial_regular"
-                    android:textColor="@color/white"
+                    android:textColor="@color/sub_text_color"
                     tools:text="2" />
 
             </LinearLayout>
@@ -101,7 +101,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:background="@drawable/task_fields_bg"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="15dp">
 
@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:background="@drawable/task_fields_bg"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="15dp">
 
@@ -159,7 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/white"
+                    android:textColor="@color/sub_text_color"
                     tools:text="2" />
 
             </LinearLayout>
@@ -173,7 +173,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:background="@drawable/task_fields_bg"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="15dp">
 
@@ -194,7 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/questrial_regular"
-                    android:textColor="@color/white"
+                    android:textColor="@color/sub_text_color"
                     tools:text="2" />
 
             </LinearLayout>
@@ -224,7 +224,7 @@
         android:layout_marginTop="20dp"
         android:text="Descirption"
         android:fontFamily="@font/questrial_regular"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/ll_task_end_holder"
         app:layout_constraintTop_toBottomOf="@+id/ll_task_end_holder" />

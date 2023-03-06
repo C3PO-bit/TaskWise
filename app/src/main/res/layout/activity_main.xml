@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_color"
+    android:background="#f2f2f3"
     android:padding="25dp"
     tools:context=".MainActivity">
 
@@ -13,9 +13,9 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_greeting"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_greeting"
         app:layout_constraintVertical_bias="0.475" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/questrial_regular"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/iv_greeting"
@@ -41,6 +41,7 @@
         app:iconifiedByDefault="false"
         android:focusableInTouchMode="true"
         android:layout_marginTop="50dp"
+
         app:layout_constraintEnd_toStartOf="@+id/fab_sort"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fab_sort" />
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/questrial_regular"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
@@ -86,5 +87,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_greeting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_greeting"
-        app:srcCompat="@drawable/ic_sort" />
+        app:srcCompat="@drawable/ic_filter" />
 </androidx.constraintlayout.widget.ConstraintLayout>

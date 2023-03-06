@@ -1,14 +1,17 @@
 package com.igor.taskwise
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import org.w3c.dom.Text
 
-class TaskAdapter(val taskList:List<Task>) :RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+class TaskAdapter(private val context: Context, val taskList:List<Task>) :RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val projectTitle = itemView.findViewById<TextView>(R.id.tv_project_description)
@@ -28,7 +31,12 @@ class TaskAdapter(val taskList:List<Task>) :RecyclerView.Adapter<TaskAdapter.Tas
         holder.projectTitle.text = task.projectTitle
         holder.date.text = task.date
         holder.taskPriority.text = task.projectPriority
-        holder.taskStart.text = task.startTime
+        when(task.projectPriority) {
+            "High" -> holder.taskPriority.setTextColor(ContextCompat.getColor(context, R.color.high_priority))
+            "Medium" -> holder.taskPriority.setTextColor(ContextCompat.getColor(context, R.color.medium_priority))
+            "Low" -> holder.taskPriority.setTextColor(ContextCompat.getColor(context, R.color.low_priority))
+        }
+        holder.taskStart.text = "${task.startTime} -"
         holder.endTime.text = task.endTime
     }
 

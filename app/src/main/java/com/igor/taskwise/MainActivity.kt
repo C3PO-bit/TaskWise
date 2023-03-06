@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setupAdapter() {
-        adapter = TaskAdapter(taskList)
+        adapter = TaskAdapter(this,taskList)
         rv_current_tasks.adapter = adapter
         rv_current_tasks.layoutManager = LinearLayoutManager(this)
         addNewTask()
@@ -98,6 +98,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupGreetingImage() {
         val animationView = findViewById<LottieAnimationView>(R.id.iv_greeting)
         val currentTime = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
+        animationView.loop(true)
         when {
             currentTime < 6 -> {
                 animationView.setAnimation(R.raw.good_night)
