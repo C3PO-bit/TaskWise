@@ -13,39 +13,38 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_greeting"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_greeting"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_greeting"
+        app:layout_constraintEnd_toStartOf="@+id/tv_greeting"/>
 
     <TextView
         android:id="@+id/tv_greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/questrial_regular"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
+        tools:text="Good Morning"
         app:layout_constraintStart_toEndOf="@+id/iv_greeting"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Good Morning" />
+        app:layout_constraintBottom_toBottomOf="@+id/iv_greeting"/>
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/searchview_bg"
-        android:focusable="true"
-        app:searchIcon="@drawable/ic_search"
-        app:iconifiedByDefault="false"
-        android:focusableInTouchMode="true"
-        android:layout_marginTop="50dp"
 
-        app:layout_constraintEnd_toStartOf="@+id/fab_sort"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fab_sort" />
-
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/searchview_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Search your task"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:layout_constraintEnd_toStartOf="@+id/fab_sort"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fab_sort"
+            app:searchIcon="@drawable/ic_search" />
 
     <TextView
         android:id="@+id/tv_ongoing_tasks"
