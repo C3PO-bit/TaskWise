@@ -15,5 +15,6 @@ data class Task(
     var projectPriority: String?,
     var startTime: String?,
     var endTime: String?,
-    var date: String?
+    var date: String?,
+    var description:String?
 ) : Parcelable

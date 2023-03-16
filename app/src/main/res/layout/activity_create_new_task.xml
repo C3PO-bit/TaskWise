@@ -14,11 +14,11 @@
         android:id="@+id/tv_create_new_task_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/questrial_regular"
         android:text="Create New Task"
         android:textColor="@color/black"
         android:textSize="22sp"
-        android:layout_marginTop="10dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,9 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/et_custom_line"
-        android:padding="10dp"
-        android:lines="1"
         android:fontFamily="@font/questrial_regular"
+        android:lines="1"
+        android:padding="10dp"
         android:textColor="@color/black"
         android:theme="@style/CustomCursor"
         app:layout_constraintStart_toStartOf="@+id/tv_task_title_hint"
@@ -69,13 +69,28 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <TextView
-                android:id="@+id/tv_date_display_hint"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/questrial_regular"
-                android:text="Date"
-                android:textColor="@color/sub_text_color" />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/tv_date_display_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/questrial_regular"
+                    android:text="Date"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,12 +120,26 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/questrial_regular"
-                android:text="Task Priority"
-                android:textColor="@color/sub_text_color" />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_priority" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/questrial_regular"
+                    android:text="Task Priority"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_priority"
@@ -142,12 +171,29 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/questrial_regular"
-                android:text="Task Start"
-                android:textColor="@color/sub_text_color" />
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/questrial_regular"
+                    android:src="@drawable/ic_start_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/questrial_regular"
+                    android:text="Start Time"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -177,12 +223,28 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/questrial_regular"
-                android:text="Task End"
-                android:textColor="@color/sub_text_color" />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/questrial_regular"
+                    android:src="@drawable/ic_end_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/questrial_regular"
+                    android:text="End Time"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -222,8 +284,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Descirption"
         android:fontFamily="@font/questrial_regular"
+        android:text="Descirption"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/ll_task_end_holder"
@@ -235,8 +297,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/et_custom_line"
-        android:gravity="top|start"
         android:fontFamily="@font/questrial_regular"
+        android:gravity="top|start"
         android:inputType="textMultiLine"
         android:lines="5"
         android:padding="10dp"

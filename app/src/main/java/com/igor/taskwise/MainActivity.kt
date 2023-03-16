@@ -90,7 +90,8 @@ class MainActivity : AppCompatActivity() {
             val taskStartTime = data?.getStringExtra(Constant.EXTRA_TASK_START)
             val taskEndTime = data?.getStringExtra(Constant.EXTRA_TASK_END)
             val taskDate = data?.getStringExtra(Constant.EXTRA_TASK_DATE)
-            val task = taskTitle?.let { Task(it, taskPriority, taskStartTime, taskEndTime, taskDate) }
+            val description = data?.getStringExtra(Constant.EXTRA_DESCRIPTION)
+            val task = taskTitle?.let { Task(it, taskPriority, taskStartTime, taskEndTime, taskDate,description) }
             if (task != null) {
                     addTask(task)
             }

@@ -198,6 +198,9 @@ class CreateNewTaskActivity : AppCompatActivity() {
                 isValid = false
             }
 
+            if(et_description.text.isNullOrEmpty()) {
+                isValid = false
+            }
             // If all fields are filled, create the task
             if (isValid) {
                 Intent().apply {
@@ -206,6 +209,7 @@ class CreateNewTaskActivity : AppCompatActivity() {
                     putExtra(Constant.EXTRA_TASK_PRIORITY, tv_priority.text.toString())
                     putExtra(Constant.EXTRA_TASK_START, tv_time_hour.text.toString())
                     putExtra(Constant.EXTRA_TASK_END, tv_time_hour_end.text.toString())
+                    putExtra(Constant.EXTRA_DESCRIPTION,et_description.text.toString())
                     setResult(RESULT_OK, this)
                 }
                 finish()
